@@ -1,0 +1,21 @@
+<div class = "container"  >
+  <img [src]="event?.imgUrl" [alt]="event?.bookTitle"
+   class = "event-image">
+
+  <div class="row">
+    <div class="col-md-11">
+      <h2>{{event?.bookTitle}} </h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div><strong>Book Id:</strong> {{event?.bookId}}</div>
+      <div><strong>Book Tile:</strong> {{event?.bookTitle}}</div>
+      <div><strong>Book Title:</strong> ${{event?.topic}}</div>
+      <div><strong>Book Author:</strong> {{event?.author}}</div>
+      <div><strong>Book Cost:</strong> {{event?.cost}}</div>
+    </div>
+    
+  </div>
+</div>
