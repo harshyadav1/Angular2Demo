@@ -2,9 +2,11 @@
 
 
 import { Injectable } from '@angular/core'
+import { BookEvent } from '../../models/bookevent'
 
 @Injectable()
 export class EventService{
+    currentEvent = new BookEvent();
     getEvents(){
         return EVENTS
     }
@@ -12,9 +14,12 @@ export class EventService{
       return EVENTS.find(event => event.bookId===bookId)
     }
     saveEvent(event){
-      event.bookId = 999
+      event.bookId = Math.floor(Math.random() * 20) //get ramdom integer
       EVENTS.push(event)
 
+    }
+    initEvent(){
+        this.currentEvent = new BookEvent();
     }
 }
 const EVENTS =[
